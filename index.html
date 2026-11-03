@@ -3,11 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tu preparación laboral, paso a paso</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto:wght@700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <header class = "navbar" >
+        <div class = "logo"> 
+            <span class = "logo-texto" > PRECV </span>
+        </div>
+        <nav class = "nav-links">
+            <!-- Son enlaces hipervinculas que significan que la ágina se deslizará automaticamente hacia la sección de la misma página que tenga el identificador id = "simulador" , igual con registro-->
+            <a href = "#simulador" class = "btn-secundario"> Iniciar sesión</a>
+            <a href = "#registro" class = "btn-primario"> Registrarse </a>
+        </nav>
+    </header>
+
+    <main class = "hero-section"> <!--Le indica a los navegadores que aqui comienza el contenido principal-->
+        <div class = "hero-contenido"> <!-- La usaremos para agrupar y alinear todo el bloque de texto-->
+            <h1 class = "hero-titulo">Tu preparación laboral,<br> paso a paso</h1> <!--el H1 es el titulo y el <br> es simplemente un salto de línea -->
+            <p class = "hero-description"> Practica entrevistas, construye tu CV y sigue tu progreso a tu propio ritmo   </p>
+            <button class = "btn-primario"> Comienza ahora </button> 
+        </div>
+        
+    </main>
+
+    <section class = "precv-auth-section"> 
+        <div class = "precv-auth-card">
+            <div class = "precv-auth-titulo"> Crea tu cuenta</div>
+            <p class = "precv-auth-subtitulo"> Únete a PRECV y mejora tu perfil laboral</p>
+
+            <form class = "precv-auth-form" action="#" methd = "POST"> 
+                <div class="precv-form-grid">
+                <div class="precv-form-group">
+                    <!-- Textos en Lato, como dicta tu guía de estilos -->
+                    <label for="nombre" class="precv-label">Nombre completo*</label>
+                    <input type="text" id="nombre" class="precv-input" placeholder="Ej. Valentina Torres" required>
+                </div>
+                
+                <div class="precv-form-group">
+                    <label for="etapa" class="precv-label">¿En qué etapa estás?*</label>
+                    <select id="etapa" class="precv-input" required>
+                        <option value="" disabled selected>Selecciona una opción</option>
+                        <option value="estudiante">Estudiante</option>
+                        <option value="egresado">Egresado</option>
+                        <option value="profesional">Profesional</option>
+                    </select>
+                </div>
+            </div>
+            </form>
+    </section>
+
+
 </body>
 </html>
 
-dasadsasdasd

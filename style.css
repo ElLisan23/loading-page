@@ -1,0 +1,78 @@
+:root{
+    /* Paleta de colores -- significa variable */ 
+    --color-Fondo: #FFFFFF;
+    --color-primario: #1D4D74;
+    --color-gris-texto: #666666;
+
+    /* Tipografía */
+    --fuente-titulos: 'Roboto', sans-serif; /*Esto es solo para las H1, H2,H3*/
+    --fuente-cuerpos: 'Lato', sans-serif; /*Esto es solo para los párrafos y textos de cuerpo*/
+}
+
+/*Reseteamos todo para trabajar sin problemas en cada navegador*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: var(--fuente-cuerpos);
+    background-color: var(--color-Fondo);
+    color: var(--color-gris-texto);
+}
+
+.btn-primario{
+
+    background-color: var(--color-primario);
+    color:var(--color-Fondo);
+    padding: 12px 24px;
+    border:none;
+    border-radius: 8px;
+    font-family: var(--fuente-cuerpos);
+    font-size:16px;
+    font-weight:700;
+    cursor:pointer; /*Esto es para que el cursor cambie a una manito cuando pase por encima del botón*/
+    transition:background-color 0.3s ease; /*Esto es para que el cambio de color sea suave cuando el usuario pase el raton por encima del boton */
+}
+
+.btn-primario:hover{
+    background-color: #163A57; 
+}
+
+.navbar{
+    display:flex; /*Esto es para que los elementos dentro del navbar se acomoden en una fila horizontal, ya que por defecto html los pone en vertical*/
+    justify-content: space-between; /*Esto es para que los elementos se distribuyan con espacio entre ellos*/
+    align-items: center; /*Esto es para que los elementos se alineen verticalmente en el centro*/
+    padding: 20px  5%; /*Esto es para agregar un espacio alrededor del navbar*/
+    border-bottom: 1px solid #E0E0E0; /*Esto es para agregar una linea debajo del navbar*/
+}
+
+.logo-texto{
+    font-family: var(--fuente-titulos);
+    font-size: 24px;
+    color: var(--color-primario);
+}
+
+.hero-section{
+    display:flex;
+    flex-direction: column; /*Esto es para que los elementos dentro de la sección hero se acomoden en una columna vertical*/
+    justify-content: center; /*Esto es para que los elementos se alineen verticalmente en el centro*/
+    padding: 80px 5%; /*Esto es para agregar un espacio alrededor de la sección hero*/
+    max-width: 800px; /*Esto es para que la sección hero no se expanda demasiado en pantallas grandes*/
+}
+
+.hero-titulo{
+    font-family: var(--fuente-titulos);
+    font-size: 48px;
+    color: #111111;
+    margin-bottom: 20px; /*Esto es para agregar un espacio debajo del título*/
+    line-height: 1.2; /*Esto es para que el texto tenga un espacio entre lineas adecuado*/
+}
+
+.hero-description{
+    font-size: 18px;
+    color: var(--color-gris-texto);
+    margin-bottom: 40px; /*Esto es para agregar un espacio debajo de la descripción*/
+    line-height: 1.5; /*Esto es para que el texto tenga un espacio entre lineas adecuado*/
+}
