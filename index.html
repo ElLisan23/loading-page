@@ -17,8 +17,7 @@
         </div>
         <nav class = "nav-links">
             <!-- Son enlaces hipervinculas que significan que la ágina se deslizará automaticamente hacia la sección de la misma página que tenga el identificador id = "simulador" , igual con registro-->
-            <a href = "#simulador" class = "btn-secundario"> Iniciar sesión</a>
-            <a href = "#registro" class = "btn-primario"> Registrarse </a>
+            
         </nav>
     </header>
 
@@ -33,19 +32,41 @@
         </div>
     </main>
 
-    <section class = "precv-auth-section"> 
+    <div class = "precv-auth-section"> 
         <div class = "precv-auth-card">
+            <div class="precv-auth-opciones">
+            <button class type = "button" id = "btn-registro">
+                Registrarse   
+            </button>
+
+            <button class type ="button" id = "btn-login">
+                Iniciar sesion
+            </button>
+            </div>
+
+        <div id = "form-registro">
+            <!-- FORMULARIO DE REGISTRO -->
             <div class = "precv-auth-titulo"> Crea tu cuenta</div>
             <p class = "precv-auth-subtitulo"> Únete a PRECV y mejora tu perfil laboral</p>
 
             <form class = "precv-auth-form" action="#" methd = "POST"> 
-                <div class="precv-form-grid">
+            <div class="precv-form-grid">
                 <div class="precv-form-group">
                     <!-- Textos en Lato, como dicta tu guía de estilos -->
                     <label for="nombre" class="precv-label">Nombre completo*</label>
-                    <input type="text" id="nombre" class="precv-input" placeholder="Ej. Valentina Torres" required>
+                    <input type="text" id="nombre" class="precv-input" placeholder=" " required>
                 </div>
-                
+
+                <div class="precv-form-correo-electronico"> 
+                    <label for="correo-electronico" class="precv-label">Correo electrónico*</label>
+                    <input type="text" id="correo-electronico" class="precv-input" placeholder=" " required>
+                </div>
+
+                <div class="precv-form-contraseña"> 
+                    <label for="contraseña" class="precv-label">Contraseña*</label>
+                    <input type="password" id="contraseña" class="precv-input" placeholder=" " required>
+                </div>
+
                 <div class="precv-form-group">
                     <label for="etapa" class="precv-label">¿En qué etapa estás?*</label>
                     <select id="etapa" class="precv-input" required>
@@ -55,9 +76,43 @@
                         <option value="profesional">Profesional</option>
                     </select>
                 </div>
+
             </div>
+            <button class type="submit">Crear mi cuenta</button>
             </form>
-    </section>
+        </div>
+
+        </div>
+
+        <!-- FORMULARIO DE INICIO DE SESIÓN  -->
+        <div id="form-login">    
+            <div class="precv-auth-titulo">
+            Bienvenido de nuevo
+            </div>
+        
+        <p class="precv-auth-subtitulo">   
+            Continúa con tu preparación laboral
+        </p>
+
+        <form class = "precv-auth-form" action="#" methd = "POST"> 
+        <div class="precv-form-grid">
+            <div class="precv-form-group">
+                    <!-- Textos en Lato, como dicta tu guía de estilos -->
+                    <label for="nombre" class="precv-label">Nombre completo*</label>
+                    <input type="text" id="nombre" class="precv-input" placeholder=" " required>
+                </div>
+        
+                <div class="precv-form-contraseña"> 
+                    <label for="contraseña" class="precv-label">Contraseña*</label>
+                    <input type="text" id="contraseña" class="precv-input" placeholder=" " required>
+                </div>
+                
+            </div>
+            <button class type="submit">Inicia sesion</button>
+            </form>
+        </div>
+    </div>
+    </section>  
 
     <hr>
     <section class="precv-section-conocequeofrecemos">
