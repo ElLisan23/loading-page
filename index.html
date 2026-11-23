@@ -9,19 +9,28 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto:wght@700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
     <header class = "navbar" >
         <div class = "logo"> 
             <span class = "logo-texto" > PRECV </span>
         </div>
-        <nav class = "nav-links">
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menú">
+            <span class="nav-toggle-barra"></span>
+        </button>
+
+        <nav class = "nav-links" id="menu-principal">
             <!-- Son enlaces hipervinculas que significan que la ágina se deslizará automaticamente hacia la sección de la misma página que tenga el identificador id = "simulador" , igual con registro-->
-            
+            <a href="#ofrecemos">Qué ofrecemos</a>
+            <a href="#acceso" data-abrir="login">Iniciar sesión</a>
+            <a href="#acceso" data-abrir="registro" class="nav-cta">Registrarse</a>
         </nav>
     </header>
 
-    <main class = "hero-section"> <!--Le indica a los navegadores que aqui comienza el contenido principal-->
+    
+    <main class = "hero-section" id = "contenido"> <!--Le indica a los navegadores que aqui comienza el contenido principal-->
         <div class = "hero-contenido"> <!-- La usaremos para agrupar y alinear todo el bloque de texto-->
             <h1 class = "hero-titulo">Tu preparación laboral,<br> paso a paso</h1> <!--el H1 es el titulo y el <br> es simplemente un salto de línea -->
             <p class = "hero-description"> Practica entrevistas, construye tu CV y sigue tu progreso a tu propio ritmo   </p>
@@ -29,6 +38,21 @@
 
             <!--Falta imagen explicativa-->
 
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+            <div class="mock-ventana">
+                <div class="mock-barra"><span></span><span></span><span></span></div>
+                <div class="mock-cuerpo">
+                    <p class="mock-pregunta">Cuéntame sobre un reto que superaste en un trabajo en equipo.</p>
+                    <p class="mock-grabando">● Grabando tu respuesta</p>
+                    <ul class="mock-metricas">
+                        <li>Contacto visual <span class="mock-barra-prog"><i style="width: 78%"></i></span></li>
+                        <li>Ritmo del habla <span class="mock-barra-prog"><i style="width: 64%"></i></span></li>
+                        <li>Claridad <span class="mock-barra-prog"><i style="width: 85%"></i></span></li>
+                    </ul>
+                    <p class="mock-nota">Vista ilustrativa de una simulación.</p>
+                </div>
+            </div>
         </div>
     </main>
 
@@ -130,6 +154,18 @@
             <h3 class="precv-section-conocequeofrecemos-simulacion-titulo"> Simulaciones de entrevistas: </h3>
             <p>
 Practica entrevistas laborales mediante simulaciones interactivas basadas en situaciones reales de selección.
+            </p>
+        </div>
+        <div class="precv-section-conocequeofrecemos-cv">
+            <h3 class="precv-section-conocequeofrecemos-cv-titulo"> Constructor de CV: </h3>
+            <p>
+                Edita tu plantilla, guarda versiones para distintas ofertas y expórtalo en un formato limpio, listo para postular.
+            </p>
+        </div>
+        <div class="precv-section-conocequeofrecemos-progreso">
+            <h3 class="precv-section-conocequeofrecemos-progreso-titulo"> Seguimiento de progreso: </h3>
+            <p>
+                Revisa tu historial de sesiones, mantén tu racha de práctica y mira cómo mejoras con el tiempo.
             </p>
         </div>
         <div class="precv-section-conocequeofrecemos-superaras">
